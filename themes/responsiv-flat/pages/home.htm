@@ -1,0 +1,14 @@
+title = "Demonstration"
+url = "/"
+layout = "default"
+==
+
+{% if url('/') == 'http://ru.cms.org' %}
+    <div class="home">
+        {% partial 'privet.htm' %}
+    </div>
+{% elseif url('/') == 'http://en.cms.org' %}
+    <div class="home">
+        {% partial 'welcome.htm' %}
+    </div>
+{% endif %}

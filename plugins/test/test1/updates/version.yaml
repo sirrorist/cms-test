@@ -1,0 +1,6 @@
+1.0.1: First version of Test1
+1.0.2:
+  - Create tables
+  - create_domains_table.php
+  - create_contacts_table.php
+  - seed_the_database.php

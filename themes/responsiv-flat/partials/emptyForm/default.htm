@@ -1,0 +1,48 @@
+<section id="layout-title">
+    <div class="container">
+        <h3>Связаться с нами</h3>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-7">
+            <p>Говяжьи ребрышки свиные ребрышки буден свиная отбивная свиная. Шенкле пастрами ветчина, донер прошутто корова на косточке колбаса индейка свинья оленина хвост курица леберкас. </p>
+            <form data-request="{{ __SELF__ }}::onFormSubmit">
+
+                {{ form_token() }}
+
+                <div id="{{ __SELF__ }}_forms_flash"></div>
+
+                <div class="form-group">
+                    <label for="email">Ваше имя</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Введите имя">
+                </div>
+                <div class="form-group">
+                    <label for="name">Ваш Email</label>
+                    <input type="text" id="email" name="email" class="form-control" placeholder="Введите Email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Ваше сообщение</label>
+                    <textarea id="comments" name="comments" rows="8" cols="80" placeholder="Введите сообщение"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <button id="simpleContactSubmitButton" type="submit" class="btn btn-default bg-primary" >Отправить сообщение</button>
+                    </div>
+                </div>
+            </form>
+            <br /><br />
+
+        </div>
+
+        <div class="col-md-5">
+            <div class="contact-banner">
+                <h3 class="banner-title">Наш офис</h3>
+                {% component 'comp1' %}
+            </div>
+        </div>
+
+    </div>
+</div>

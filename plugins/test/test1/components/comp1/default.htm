@@ -1,0 +1,23 @@
+{% set d_id = 0 %}
+
+{% for domain in domains %}
+    {% for d in domain %}
+        {% if d.domain_name == url('/') %}
+            {% set d_id = d.id %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+{% for contact in contacts %}
+    {% for c in contact %}
+        {% if c.dom_id == d_id %}
+        <ul>
+            <li>{{c.country}}</li>
+            <li>{{c.city}}</li>
+            <li>{{c.street}}</li>
+            <li>{{c.phone}}</li>
+            <li>Email: <a href="#">{{c.email}}</a></li>
+        </ul>
+        {% endif %}
+    {% endfor %}
+{% endfor %}

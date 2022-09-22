@@ -1,0 +1,48 @@
+<section id="layout-title">
+    <div class="container">
+        <h3>Contact Us</h3>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-7">
+            <p>Beef ribs pig spare ribs boudin pork chop swine. Shankle pastrami ham, doner prosciutto cow t-bone kielbasa turkey pig venison tail chicken leberkas. </p>
+            <form data-request="{{ __SELF__ }}::onFormSubmit">
+
+                {{ form_token() }}
+
+                <div id="{{ __SELF__ }}_forms_flash"></div>
+
+                <div class="form-group">
+                    <label for="email">Your name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter name">
+                </div>
+                <div class="form-group">
+                    <label for="name">Your email address</label>
+                    <input type="text" id="email" name="email" class="form-control" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your message</label>
+                    <textarea id="comments" name="comments" rows="8" cols="80" placeholder="Enter message"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <button id="simpleContactSubmitButton" type="submit" class="btn btn-default bg-primary">Send message</button>
+                    </div>
+                </div>
+            </form>
+            <br /><br />
+
+        </div>
+
+        <div class="col-md-5">
+            <div class="contact-banner">
+                <h3 class="banner-title">Our location</h3>
+                {% component 'comp1' %}
+            </div>
+        </div>
+
+    </div>
+</div>
